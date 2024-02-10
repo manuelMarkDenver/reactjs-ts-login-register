@@ -1,13 +1,17 @@
-import './App.css'
+import { ThemeProvider } from "@mui/material";
+
+import "./App.css";
+import Banner from "./components/Banner";
+import theme from "./themes/theme";
 
 function App() {
-  // const [count, setCount] = useState(0)
-
   return (
     <>
-      <h1>Test</h1>
+      <ThemeProvider theme={theme}>
+        <Banner />
+      </ThemeProvider>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
